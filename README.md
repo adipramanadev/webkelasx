@@ -1,11 +1,17 @@
 # Project Documentation LKS
 
 ## Introduction
-This is a **sample project**.
+This is a **sample project SpeeDtest**.
 
 ### Features
-- Feature 1
-- Feature 2
+- phpcalender
+- loadingAmimation
+- Digital TImer
+- canvas animation
+- xml json converter
+- chat analitycs
+- Transition
+- 
   - Subfeature
 
 
