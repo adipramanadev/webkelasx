@@ -11,8 +11,6 @@ This is a **sample project SpeeDtest**.
 - xml json converter
 - chat analitycs
 - Transition
-- 
-  - Subfeature
 
 
 ## Screenshots
