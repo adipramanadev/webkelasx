@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Splitter with Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="input-container">
+        <label for="xInput">X:</label>
+        <input type="number" id="xInput" min="1" placeholder="Enter X">
+        <label for="yInput">Y:</label>
+        <input type="number" id="yInput" min="1" placeholder="Enter Y">
+        <button id="splitButton">Split Image</button>
+    </div>
+    
+    <div class="image-container">
+        <img id="sourceImage" src="https://th.bing.com/th/id/OIP.bc4TXRvr_7qsB3F9rP85-QHaHa?rs=1&pid=ImgDetMain" alt="Image to Split" style="display:none;">
+        <div id="imageGrid" class="grid"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
