@@ -1,0 +1,18 @@
+[
+    {
+        "type": "sent", 
+        "message": "Hello, how are you?"
+    },
+    {
+        "type": "received", "message": "Hello, I'm good, thank you!"
+    },
+    {
+        "type": "sent", 
+        "message": "That's great to hear."
+    },
+    {
+        "type": "received", 
+        "message": "Yes, let's catch up soon."
+    }
+    
+]
