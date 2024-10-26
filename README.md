@@ -13,7 +13,7 @@ This is a **sample project**.
 
 Here are some screenshots of the project:
 
-![Screenshot 1](img src="https://github.com/adipramanadev/webkelasx/blob/devphpnative/screenshoot/1.png" alt="Screenshot 1" width="300")
+![Screenshot 1](<img src="https://github.com/adipramanadev/webkelasx/blob/devphpnative/screenshoot/1.png" alt="Screenshot 1" width="300">)
 ![Screenshot 2](screenshoot/2.png)
 ![Screenshot 2](screenshoot/3.png)
 ![Screenshot 2](screenshoot/4.png)
