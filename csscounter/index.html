@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Counter</title>
+    <style>
+        /* Resetting basic styles */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffffff;
+        }
+
+        /* Container for the boxes */
+        .container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for each box */
+        .box {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+
+        /* Style when a box is selected */
+        .box.selected {
+            background-color: gold;
+            border: 4px solid black;
+        }
+
+        /* Style for the sum display */
+        .sum-display {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" data-value="10">10</div>
+        <div class="box" data-value="32">32</div>
+        <div class="box" data-value="64">64</div>
+        <div class="box" data-value="-15">-15</div>
+    </div>
+    <div class="sum-display">Sum: 0</div>
+
+    <script>
+        // Mendapatkan semua elemen dengan class 'box'
+        const boxes = document.querySelectorAll('.box');
+        const sumDisplay = document.querySelector('.sum-display');
+        let sum = 0;
+
+        // Event listener untuk setiap kotak
+        boxes.forEach(box => {
+            box.addEventListener('click', () => {
+                const value = parseInt(box.getAttribute('data-value'));
+
+                // Cek apakah kotak sudah dipilih
+                if (box.classList.contains('selected')) {
+                    // Jika dipilih, hapus nilai dari sum dan hapus kelas 'selected'
+                    sum -= value;
+                    box.classList.remove('selected');
+                } else {
+                    // Jika belum dipilih, tambahkan nilai ke sum dan tambahkan kelas 'selected'
+                    sum += value;
+                    box.classList.add('selected');
+                }
+
+                // Update tampilan sum
+                sumDisplay.textContent = `Sum: ${sum}`;
+            });
+        });
+    </script>
+</body>
+</html>
