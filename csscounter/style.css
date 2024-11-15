@@ -6,7 +6,7 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-color: #f9f9f9;
+    background-color: #f7f7f7;
 }
 
 .container {
@@ -22,31 +22,34 @@ body {
     align-items: center;
     justify-content: center;
     border: 2px solid #333;
-    box-sizing: border-box;
-    position: relative;
-}
-
-.box input[type="checkbox"] {
-    display: none;
-}
-
-.box label {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     color: #333;
     cursor: pointer;
+    transition: background-color 0.3s, border-width 0.3s;
 }
 
-/* CSS untuk efek ketika kotak diklik */
-.box input[type="checkbox"]:checked + label {
+.box:active {
     background-color: gold;
-    border: 3px solid #333;
-    color: #fff;
-    padding: 10px 20px;
-    box-sizing: border-box;
+    border-width: 4px;
 }
 
-.sum-container {
-    font-size: 20px;
-    font-weight: bold;
+/* CSS Counter untuk menghitung kotak yang diklik */
+.counter-display {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.container {
+    counter-reset: boxClickCount;
+}
+
+.box:active::before {
+    counter-increment: boxClickCount;
+    content: counter(boxClickCount);
+    display: none; /* Menghitung klik, tapi tidak menampilkan */
+}
+
+.counter-display .counter::before {
+    content: counter(boxClickCount);
 }

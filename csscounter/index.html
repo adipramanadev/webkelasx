@@ -3,33 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Counter</title>
+    <title>CSS Counter Example</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
-    <div class="box">
-        <input type="checkbox" id="box1">
-        <label for="box1">10</label>
-    </div>
-    <div class="box">
-        <input type="checkbox" id="box2">
-        <label for="box2">32</label>
-    </div>
-    <div class="box">
-        <input type="checkbox" id="box3">
-        <label for="box3">64</label>
-    </div>
-    <div class="box">
-        <input type="checkbox" id="box4">
-        <label for="box4">-15</label>
-    </div>
+    <div class="box" data-value="10">10</div>
+    <div class="box" data-value="32">32</div>
+    <div class="box" data-value="64">64</div>
+    <div class="box" data-value="-15">-15</div>
 </div>
 
-<div class="sum-container">
-    <p>Sum: <span id="sum">0</span></p>
-</div>
+<div class="counter-display">Clicked boxes: <span class="counter">0</span></div>
 
 </body>
 </html>
