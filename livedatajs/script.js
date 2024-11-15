@@ -14,6 +14,23 @@ function updateData() {
 function drawChart() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+  // Draw the background grid and percentage labels
+  for (let i = 0; i <= 10; i++) {
+    const y = (canvas.height / 10) * i;
+    ctx.beginPath();
+    ctx.moveTo(0, y);
+    ctx.lineTo(canvas.width, y);
+    ctx.strokeStyle = '#ddd';
+    ctx.stroke();
+
+    // Add the percentage labels on the right side
+    ctx.font = '12px Arial';
+    ctx.fillStyle = '#333';
+    ctx.textAlign = 'right';
+    ctx.fillText(`${100 - i * 10}%`, canvas.width - 5, y + 3);
+  }
+
+  // Draw the live data chart
   ctx.beginPath();
   ctx.moveTo(0, canvas.height - (data[0] * canvas.height) / 100);
 
